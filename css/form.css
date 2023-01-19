@@ -48,18 +48,18 @@ fieldset#sexo{
 }
 
 fieldset#usuario{
-    background: url('./imagens/icone-contato.png') no-repeat 95% 95%; /*95% 95% fica em baixo no lado direito*/
+    background: url('../imagens/icone-contato.png') no-repeat 95% 95%; /*95% 95% fica em baixo no lado direito*/
     
 }
 
 fieldset#endereco{
-    background: url('./imagens/icone-endereco.png') no-repeat 95% 95%;
+    background: url('../imagens/icone-endereco.png') no-repeat 95% 95%;
 }
 
 fieldset#mensagem{
-    background: url('./imagens/icone-mensagem.png') no-repeat 95% 95%;
+    background: url('../imagens/icone-mensagem.png') no-repeat 95% 95%;
 }
 
 fieldset#google-glass{
-    background: url('./_magens/icone-pagamento.png') no-repeat 95% 95%;
+    background: url('../imagens/icone-pagamento.png') no-repeat 95% 95%;
 }
