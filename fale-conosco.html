@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass</title>
+  <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="_css/form.css"  
+ <script></script>
+  <script>
+    function enviar(){
+    var qtd = Number(document.getElementById('cQuant').value)
+    tot = qtd * 1500
+    document.getElementById('cTot').value = tot
+}
+  </script>
+</head>
+<body>
+    
+    <div id="interface">
+        <header id="cabecalho">
+        <hgroup> <!--serve para agrupar (neste caso, títulos)-->
+     <h1> Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+        </hgroup> 
+
+<img id="icone" src="_imagens/contato1.png">
+<!--<img id="icone" src="_imagens/fotos.png"> -->
+    <nav id="menu" >
+    <h1>Menu Principal</h1>
+    <ul onmouseout="MouseFoto('contato1')">
+        <li onmouseover="MouseFoto('home1')"><a href="index.html">Home</a></li>
+        <li onmouseover="MouseFoto('especificacoes1')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="MouseFoto('fotos1')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="MouseFoto('multimidia1')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmouseover="MouseFoto('contato1')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+    </nav>
+    </header>
+
+    <section id="corpo-full">
+        <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+        <hgroup>
+       <h3>Glass > Especificações</h3>
+        <h1>Raio-X no Google Glass</h1>
+        <h2>por Gustavo Guanabara</h2>
+        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+    </hgroup>
+    </header>
+
+<form method="post" id="fContato" action="mailto:drigocn2@hotmail.com" oninput="enviar()">
+    <fieldset id="usuario"> <!--Fieldset: conjunto de campos-->
+        <legend>Identificação do Usuário</legend>
+        <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+        <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+        <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Ex.: joao@mail.com"></p>
+        <fieldset id="sexo">
+            <legend>Sexo</legend>
+            <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label> <br><!--Label: serve para criar uma 'area' onde possamos clicar no nome ao inves de só clicar no campo determinado // sempre coloca o id no label for="*"-->
+         <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
+        </fieldset>
+    <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></p>
+
+</fieldset>
+
+<fieldset id="endereco">
+    <legend>Endereço do Usuário </legend>
+    <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="30" maxlength="80" placeholder="Av, Rua, Trav... "></p>
+    <p><label for="cNum">Número: <input type="number" name="tNum" id="cNum" min="0" max="99999"></label></p>
+    <p><label for="cEstado">Estado:</label> <select name="tEstado" id="cEstado">
+        <optgroup label="Região Sudeste"><!--optgroup: cria um grupo no formulário-->
+        <option value="RJ" selected>Rio de Janeiro</option> <!--selected: serve para deixar selecionado o Rio de Janeiro-->
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="ES">Espírito Santo</option>
+    </optgroup>
+        <optgroup label="Região Sul">
+        <option value="SC">Santa Catarina</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="PR">Paraná</option>
+    </optgroup>
+        <optgroup label="Região Nordeste">
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="SE">Sergipe</option>
+    </optgrounp>
+    </select></p>
+    <p><label for="cCidade">Cidade: <input type="text" name="tCidade" id="cCidade" maxlength="40" placeholder="Sua Cidade" list="cidades"></label></p>
+    <datalist id="cidades">
+        <option value="Rio de Janeiro"></option>
+        <option value="Nova Iguaçu"></option>
+        <option value="Niterói"></option>
+        <option value="Belford Roxo"></option>
+    </datalist>
+</fieldset>
+
+<fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+    <p>Grau de Urgência: Mín
+        <input type="range" name="tUrgencia" id="cUrgencia" min="0" max="10">Máx
+    </p>
+    <p>Mensagem:
+        <textarea name="tMsg" id="cMsg" cols="35" rows="4" placeholder="Deixa aqui sua mensagem"></textarea>
+    </p>
+</fieldset>
+
+<fieldset id="google-glass">
+    <legend>Quero um Google Glass</legend><!--Legend: da o título do Fieldset-->
+    <p><input type="checkbox" name="tPedido" id="cPedido">
+        <label for="cPedido">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="cCor">Cor:</label>
+    <input type="color" list="color-options" name="tCor" id="cCor">
+    <datalist id="color-options">
+        <option value="#000000">Preto</option>
+        <option value="#ffffff">Branco</option>
+        <option value="#ff0000" selected>Vermelho</option>
+        <option value="#3F8D34">Verde</option>
+        <option value="#0000ff">Azul</option>
+    </datalist><a id="corText">Somente essas cores</a></p>
+    <p><label for="cQuant">Quantidade:</label>
+    <input type="number" name="tQuant" id="cQuant" min="0" max="5" value="0"></p>
+    <p><label for="cTot">Preço Total: $</label>
+    <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+</fieldset>
+<br>
+
+
+<input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+<br>
+</form>
+
+<footer id="rodape">
+    <p>Copyright &copy; 2013 - by Gustavo Guanabara<br>
+    <a href="http://facebook.com.br" target="_blank" rel="noopner noreferrer"> Facebook</a> | <a href="http://twitter.com" target="_blank" rel="noopner noreferrer"> Twitter</a></p>
+    </footer>
+    
+</div>
+
+</body>
+</html>
