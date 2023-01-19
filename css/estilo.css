@@ -47,7 +47,7 @@ header#cabecalho img#icone{
 header#cabecalho{
     border-bottom: 1px #606060 solid;
     height: 150px;
-    background-image: url('./imagens/glass-logo-peq.jpg')  ;
+    background-image: url('./imagens/glass-logo-peq.jpg');
     background-repeat: no-repeat;
     background-position: 0px 80px;
 }
